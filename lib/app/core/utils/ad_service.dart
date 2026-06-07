@@ -22,11 +22,11 @@ class AdService extends GetxService {
 
   // ── Test Ad Unit IDs ────────────────────────────────────────────────────
   String get _rewardedAdUnitId => Platform.isAndroid
-      ? 'ca-app-pub-3940256099942544/5224354917'
+      ? 'ca-app-pub-9388120393263060/2295552501'
       : 'ca-app-pub-9388120393263060/6370528888';
 
   String get _interstitialAdUnitId => Platform.isAndroid
-      ? 'ca-app-pub-3940256099942544/1033173712'
+      ? 'ca-app-pub-9388120393263060/4921715848'
       : 'ca-app-pub-9388120393263060/7915240921';
 
   // ── Initialization ──────────────────────────────────────────────────────
