@@ -58,6 +58,8 @@ const Map<String, String> trTR = {
       'Tüm skor, seviye ve gem verisi silinecek.\nBu işlem geri alınamaz.',
   'btn_reset': 'SIFIRLA',
   'snack_progress_reset': 'İlerleme sıfırlandı.',
+  'btn_delete_account': 'HESAP VE VERİLERİ SİL',
+  'subtitle_delete_account': 'Veri silme talebi gönder',
 
   // ── Gem Shop ──────────────────────────────────────────────────────────
   'title_gem_shop': 'GEM SHOP',

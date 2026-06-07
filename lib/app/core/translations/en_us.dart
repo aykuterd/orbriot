@@ -58,6 +58,8 @@ const Map<String, String> enUS = {
       'All scores, levels and gems will be deleted.\nThis cannot be undone.',
   'btn_reset': 'RESET',
   'snack_progress_reset': 'Progress reset.',
+  'btn_delete_account': 'DELETE ACCOUNT & DATA',
+  'subtitle_delete_account': 'Submit a data deletion request',
 
   // ── Gem Shop ──────────────────────────────────────────────────────────
   'title_gem_shop': 'GEM SHOP',

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../controllers/settings_controller.dart';
 import '../../routes/app_routes.dart';
 import '../../theme/app_colors.dart';
@@ -213,6 +214,17 @@ class _SettingsViewState extends State<SettingsView>
                             subtitle: 'subtitle_reset_progress'.tr,
                             color: AppColors.accent,
                             onTap: () => _showResetDialog(context, ctrl),
+                          ),
+                          _divider(),
+                          _DangerRow(
+                            icon: Icons.delete_forever_rounded,
+                            title: 'btn_delete_account'.tr,
+                            subtitle: 'subtitle_delete_account'.tr,
+                            color: AppColors.error,
+                            onTap: () => launchUrl(
+                              Uri.parse('https://aykuterd.github.io/orbriot/deletion.html'),
+                              mode: LaunchMode.externalApplication,
+                            ),
                           ),
                         ],
                       ),
