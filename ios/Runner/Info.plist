@@ -166,5 +166,7 @@
 		<dict><key>SKAdNetworkIdentifier</key><string>p44ujia1g9.skadnetwork</string></dict>
 		<dict><key>SKAdNetworkIdentifier</key><string>zq492l623r.skadnetwork</string></dict>
 	</array>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 </dict>
 </plist>
