@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORBRIOT - Retro-Futuristic Brick Blast Game</title>
+  <meta name="description" content="ORBRIOT - A retro-futuristic cyberpunk themed brick blast game. Break bricks, collect gems, and become the ultimate champion!">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="web/favicon.png">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">ORBRIOT</a>
+        <ul class="nav-links">
+          <li><a href="#about" data-lang="nav_about">About</a></li>
+          <li><a href="#how-to-play" data-lang="nav_howto">How to Play</a></li>
+          <li><a href="#screenshots" data-lang="nav_screenshots">Screenshots</a></li>
+          <li><a href="support.html" data-lang="nav_support">Support</a></li>
+        </ul>
+        <div class="nav-right">
+          <div class="lang-switch">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="tr">TR</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>ORBRIOT</h1>
+          <p class="tagline" data-lang="hero_tagline">A Retro-Futuristic Cyberpunk Brick Blast Experience</p>
+          <div class="hero-buttons">
+            <a href="#download" class="btn btn-primary glow-animation" data-lang="hero_download">Download Now</a>
+            <a href="#how-to-play" class="btn btn-secondary" data-lang="hero_learn">Learn More</a>
+          </div>
+          <div class="store-buttons">
+            <a href="https://apps.apple.com/app/orbriot" target="_blank" class="btn-store" id="ios-link">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <span data-lang="store_ios">App Store</span>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.orbriot.orbriot" target="_blank" class="btn-store" id="android-link">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27m3.35-4.31c.34.27.59.69.59 1.19s-.22.9-.57 1.18l-2.29 1.32-2.5-2.5 2.5-2.5 2.27 1.31M6.05 2.66l10.76 6.22-2.27 2.27L6.05 2.66z"/>
+              </svg>
+              <span data-lang="store_android">Google Play</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title" data-lang="about_title">About ORBRIOT</h2>
+        <p class="section-subtitle" data-lang="about_subtitle">
+          Immerse yourself in a retro-futuristic cyberpunk world where neon lights meet classic brick-breaking action.
+        </p>
+        <div class="about-grid">
+          <div class="feature-card">
+            <div class="feature-icon">💎</div>
+            <h3 data-lang="feature_gems_title">Collect Gems</h3>
+            <p data-lang="feature_gems_desc">Earn gems to unlock power-ups, skins, and permanent upgrades that enhance your gameplay.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3 data-lang="feature_powerups_title">Power-Ups</h3>
+            <p data-lang="feature_powerups_desc">Use fireballs, multiball, nuke, and more to dominate the arena and break through tough bricks.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👑</div>
+            <h3 data-lang="feature_prestige_title">Prestige System</h3>
+            <p data-lang="feature_prestige_desc">Reset your progress to earn permanent bonuses and become the ultimate champion.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3 data-lang="feature_achievements_title">Achievements</h3>
+            <p data-lang="feature_achievements_desc">Complete daily missions, earn achievements, and claim login rewards to progress faster.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3 data-lang="feature_skins_title">Custom Skins</h3>
+            <p data-lang="feature_skins_desc">Personalize your ball with unique skins and stand out on the leaderboard.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎮</div>
+            <h3 data-lang="feature_modes_title">Game Modes</h3>
+            <p data-lang="feature_modes_desc">Choose between Classic mode with levels or Endless mode for infinite challenges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-to-play" class="how-to-play">
+      <div class="container">
+        <h2 class="section-title" data-lang="howto_title">How to Play</h2>
+        <p class="section-subtitle" data-lang="howto_subtitle">
+          Master the basics and become a brick-breaking legend
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3 data-lang="step1_title">Aim & Launch</h3>
+            <p data-lang="step1_desc">Drag and release to launch your ball. Use the aiming line to predict the trajectory.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3 data-lang="step2_title">Break Bricks</h3>
+            <p data-lang="step2_desc">Hit bricks to break them. Each hit reduces brick HP. Collect falling gems for bonus rewards.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3 data-lang="step3_title">Use Power-Ups</h3>
+            <p data-lang="step3_desc">Activate power-ups strategically to clear more bricks and maximize your score.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3 data-lang="step4_title">Don't Drop!</h3>
+            <p data-lang="step4_desc">Keep the ball from falling off the bottom. Use your skills to survive as long as possible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+      <div class="container">
+        <h2 class="section-title" data-lang="screenshots_title">Screenshots</h2>
+        <p class="section-subtitle" data-lang="screenshots_subtitle">
+          Experience the cyberpunk visuals
+        </p>
+        <div class="screenshot-grid">
+          <div class="screenshot-item">
+            <div class="screenshot-placeholder">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+              </svg>
+              <span data-lang="screenshot_placeholder">Screenshot 1</span>
+            </div>
+          </div>
+          <div class="screenshot-item">
+            <div class="screenshot-placeholder">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+              </svg>
+              <span data-lang="screenshot_placeholder">Screenshot 2</span>
+            </div>
+          </div>
+          <div class="screenshot-item">
+            <div class="screenshot-placeholder">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+              </svg>
+              <span data-lang="screenshot_placeholder">Screenshot 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="cta-section">
+      <div class="container">
+        <h2 data-lang="cta_title">Ready to Play?</h2>
+        <p data-lang="cta_subtitle">Download ORBRIOT now and start your cyberpunk brick-breaking adventure!</p>
+        <div class="store-buttons">
+          <a href="https://apps.apple.com/app/orbriot" target="_blank" class="btn-store">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span data-lang="store_ios">App Store</span>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.orbriot.orbriot" target="_blank" class="btn-store">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27m3.35-4.31c.34.27.59.69.59 1.19s-.22.9-.57 1.18l-2.29 1.32-2.5-2.5 2.5-2.5 2.27 1.31M6.05 2.66l10.76 6.22-2.27 2.27L6.05 2.66z"/>
+            </svg>
+            <span data-lang="store_android">Google Play</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4 data-lang="footer_about">About</h4>
+          <ul>
+            <li><a href="#about" data-lang="nav_about">About</a></li>
+            <li><a href="#how-to-play" data-lang="nav_howto">How to Play</a></li>
+            <li><a href="#screenshots" data-lang="nav_screenshots">Screenshots</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-lang="footer_support">Support</h4>
+          <ul>
+            <li><a href="support.html" data-lang="footer_support_link">Contact Support</a></li>
+            <li><a href="privacy.html" data-lang="footer_privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-lang="footer_terms">Terms of Use</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-lang="footer_legal">Legal</h4>
+          <ul>
+            <li><a href="privacy.html" data-lang="footer_privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-lang="footer_terms">Terms of Use</a></li>
+            <li><a href="deletion.html" data-lang="footer_deletion">Data Deletion</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ORBRIOT. <span data-lang="footer_rights">All rights reserved.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

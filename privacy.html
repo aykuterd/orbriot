@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - ORBRIOT</title>
+  <meta name="description" content="ORBRIOT Privacy Policy - How we handle your data">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="web/favicon.png">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">ORBRIOT</a>
+        <ul class="nav-links">
+          <li><a href="index.html#about" data-lang="nav_about">About</a></li>
+          <li><a href="index.html#how-to-play" data-lang="nav_howto">How to Play</a></li>
+          <li><a href="index.html#screenshots" data-lang="nav_screenshots">Screenshots</a></li>
+          <li><a href="support.html" data-lang="nav_support">Support</a></li>
+        </ul>
+        <div class="nav-right">
+          <div class="lang-switch">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="tr">TR</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-content">
+      <div class="container">
+        <div class="page-header">
+          <h1 data-page-title="page_privacy_title">Privacy Policy</h1>
+          <p data-lang="page_privacy_subtitle">How we handle your data</p>
+        </div>
+
+        <div class="content-section">
+          <p data-lang="privacy_intro">This Privacy Policy describes how ORBRIOT collects, uses, and protects your personal information.</p>
+        </div>
+
+        <div class="content-section">
+          <h2 data-lang="privacy_collect_title">Information We Collect</h2>
+          <ul id="collect-list">
+            <li>Device information (model, OS version)</li>
+            <li>Game progress and statistics</li>
+            <li>Purchase history</li>
+            <li>Analytics data</li>
+          </ul>
+        </div>
+
+        <div class="content-section">
+          <h2 data-lang="privacy_use_title">How We Use Your Information</h2>
+          <ul id="use-list">
+            <li>To provide and improve our services</li>
+            <li>To sync your game progress</li>
+            <li>To analyze app performance</li>
+            <li>To personalize your experience</li>
+          </ul>
+        </div>
+
+        <div class="content-section">
+          <h2 data-lang="privacy_thirdparty_title">Third-Party Services</h2>
+          <p data-lang="privacy_thirdparty_desc">We use Firebase (Google) for authentication and cloud storage. Their privacy policy applies to data handled by them.</p>
+        </div>
+
+        <div class="content-section">
+          <p data-lang="privacy_contact">Questions about this policy? Contact us at <a href="mailto:support@orbriot.com">support@orbriot.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4 data-lang="footer_about">About</h4>
+          <ul>
+            <li><a href="index.html#about" data-lang="nav_about">About</a></li>
+            <li><a href="index.html#how-to-play" data-lang="nav_howto">How to Play</a></li>
+            <li><a href="index.html#screenshots" data-lang="nav_screenshots">Screenshots</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-lang="footer_support">Support</h4>
+          <ul>
+            <li><a href="support.html" data-lang="footer_support_link">Contact Support</a></li>
+            <li><a href="privacy.html" data-lang="footer_privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-lang="footer_terms">Terms of Use</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-lang="footer_legal">Legal</h4>
+          <ul>
+            <li><a href="privacy.html" data-lang="footer_privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-lang="footer_terms">Terms of Use</a></li>
+            <li><a href="deletion.html" data-lang="footer_deletion">Data Deletion</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ORBRIOT. <span data-lang="footer_rights">All rights reserved.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lists = {
+        'collect-list': 'privacy_collect_list',
+        'use-list': 'privacy_use_list'
+      };
+      
+      const originalUpdate = window.updateLanguage;
+      window.updateLanguage = function(lang) {
+        originalUpdate(lang);
+        
+        Object.keys(lists).forEach(id => {
+          const el = document.getElementById(id);
+          const key = lists[id];
+          if (el && window.translations && window.translations[lang] && window.translations[lang][key]) {
+            el.innerHTML = window.translations[lang][key].map(item => `<li>${item}</li>`).join('');
+          }
+        });
+      };
+      
+      window.translations = translations;
+    });
+  </script>
+</body>
+</html>

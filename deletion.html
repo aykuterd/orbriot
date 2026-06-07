@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Deletion - ORBRIOT</title>
+  <meta name="description" content="ORBRIOT Data Deletion - Your data, your choice">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="web/favicon.png">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">ORBRIOT</a>
+        <ul class="nav-links">
+          <li><a href="index.html#about" data-lang="nav_about">About</a></li>
+          <li><a href="index.html#how-to-play" data-lang="nav_howto">How to Play</a></li>
+          <li><a href="index.html#screenshots" data-lang="nav_screenshots">Screenshots</a></li>
+          <li><a href="support.html" data-lang="nav_support">Support</a></li>
+        </ul>
+        <div class="nav-right">
+          <div class="lang-switch">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="tr">TR</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-content">
+      <div class="container">
+        <div class="page-header">
+          <h1 data-page-title="page_deletion_title">Data Deletion</h1>
+          <p data-lang="page_deletion_subtitle">Your data, your choice</p>
+        </div>
+
+        <div class="content-section">
+          <p data-lang="deletion_intro">You can request deletion of your personal data at any time.</p>
+        </div>
+
+        <div class="content-section">
+          <h2 data-lang="deletion_how_title">How to Request Deletion</h2>
+          <ul id="deletion-how-list">
+            <li>Send an email to support@orbriot.com with subject "Data Deletion Request"</li>
+            <li>Include your username or email used for account</li>
+            <li>We will process your request within 30 days</li>
+          </ul>
+        </div>
+
+        <div class="content-section">
+          <h2 data-lang="deletion_what_title">What Will Be Deleted</h2>
+          <ul id="deletion-what-list">
+            <li>Game progress and scores</li>
+            <li>Account information</li>
+            <li>Purchase history</li>
+            <li>All stored preferences</li>
+          </ul>
+        </div>
+
+        <div class="content-section">
+          <p data-lang="deletion_note">Note: Some data may be retained for legal obligations or fraud prevention purposes.</p>
+        </div>
+
+        <div class="content-section">
+          <p data-lang="deletion_contact">Questions? Contact us at <a href="mailto:support@orbriot.com">support@orbriot.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4 data-lang="footer_about">About</h4>
+          <ul>
+            <li><a href="index.html#about" data-lang="nav_about">About</a></li>
+            <li><a href="index.html#how-to-play" data-lang="nav_howto">How to Play</a></li>
+            <li><a href="index.html#screenshots" data-lang="nav_screenshots">Screenshots</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-lang="footer_support">Support</h4>
+          <ul>
+            <li><a href="support.html" data-lang="footer_support_link">Contact Support</a></li>
+            <li><a href="privacy.html" data-lang="footer_privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-lang="footer_terms">Terms of Use</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4 data-lang="footer_legal">Legal</h4>
+          <ul>
+            <li><a href="privacy.html" data-lang="footer_privacy">Privacy Policy</a></li>
+            <li><a href="terms.html" data-lang="footer_terms">Terms of Use</a></li>
+            <li><a href="deletion.html" data-lang="footer_deletion">Data Deletion</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ORBRIOT. <span data-lang="footer_rights">All rights reserved.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const listKeys = {
+        'deletion-how-list': 'deletion_how_list',
+        'deletion-what-list': 'deletion_what_list'
+      };
+      
+      const originalUpdate = window.updateLanguage;
+      window.updateLanguage = function(lang) {
+        originalUpdate(lang);
+        
+        Object.keys(listKeys).forEach(id => {
+          const el = document.getElementById(id);
+          const key = listKeys[id];
+          if (el && window.translations && window.translations[lang] && window.translations[lang][key]) {
+            el.innerHTML = window.translations[lang][key].map(item => `<li>${item}</li>`).join('');
+          }
+        });
+      };
+      
+      window.translations = translations;
+    });
+  </script>
+</body>
+</html>
